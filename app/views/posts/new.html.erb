@@ -1,0 +1,8 @@
+<%= simple_form_for(@post) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :post_date %>
+  <%= f.input :description %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+  <%= f.submit "Create a post", class: "btn btn-primary" %>
+<% end %>

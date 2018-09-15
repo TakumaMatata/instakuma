@@ -11,24 +11,24 @@ puts 'Cleaning database...'
 Post.destroy_all
 User.destroy_all
 
-puts 'Creating posts...'
+# puts 'Creating posts...'
 
-10.times do
-  post = Post.new(
-    title: Faker::RuPaul.queen ,
-    post_date: Faker::Date.between(5.days.ago, Date.today) ,
-    description: Faker::Friends.quote
-  )
+# 10.times do
+#   post = Post.new(
+#     title: Faker::RuPaul.queen ,
+#     post_date: Faker::Date.between(5.days.ago, Date.today) ,
+#     description: Faker::Friends.quote
+#   )
 
-  post.save!
-end
-
-
-takuma = User.new(email: "takuma@gmail.com", password: "123456")
+#   post.save!
+# end
 
 
-takuma.save!
-puts 'Finished!'
+# takuma = User.new(email: "takuma@gmail.com", password: "123456")
+
+
+# takuma.save!
+# puts 'Finished!'
 
 
 # t.string "title"

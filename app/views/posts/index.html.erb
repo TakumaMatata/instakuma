@@ -1,9 +1,24 @@
 <h1>posts/index</h1>
 
-  <% @posts.each do |post| %>
-  <ul>
-    <li> <%= post.title %></li>
-    <li> <%= post.description %> </li>
-    <li> <%= post.post_date %></li>
-  </ul>
-  <% end %>
+
+
+<div class="cards">
+  <div class="container">
+    <div class="row">
+      <% @posts.each do |post| %>
+      <div class="col-xs-12 col-sm-6 col-md-4 ">
+        <div class="card"
+        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+               url('<%= cl_image_path post.photo, height: 300, width: 400, crop: :fill %>')">
+          <div class="card-category"><%= post.title %></div>
+          <div class="card-description">
+          <h2><%= post.post_date %></h2>
+          <p><%= post.description %></p>
+          </div>
+          <%= link_to "", post_path(post), class: 'card-link' %>
+        </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
