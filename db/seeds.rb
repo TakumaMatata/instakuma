@@ -12,20 +12,22 @@ Post.destroy_all
 User.destroy_all
 
 puts 'Creating posts...'
-posts_attributes = [
-  {
+
+10.times do
+  post = Post.new(
     title: Faker::RuPaul.queen ,
     post_date: Faker::Date.between(5.days.ago, Date.today) ,
-    description: Faker::Friends.quote ,
-  },
+    description: Faker::Friends.quote
+  )
 
-]
+  post.save!
+end
+
 
 takuma = User.new(email: "takuma@gmail.com", password: "123456")
 
 
 takuma.save!
-Post.create!(posts_attributes)
 puts 'Finished!'
 
 

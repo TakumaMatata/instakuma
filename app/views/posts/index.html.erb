@@ -1,2 +1,8 @@
 <h1>posts/index</h1>
-<h1>xoxo</h1>
+  <% @posts.each do |post| %>
+  <ul>
+    <li> <%= post.title %></li>
+    <li> <%= post.description %> </li>
+    <li> <%= post.post_date %></li>
+  </ul>
+  <% end %>
