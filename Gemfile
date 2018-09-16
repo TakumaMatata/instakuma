@@ -40,6 +40,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap-sass'
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
+gem 'devise'
 gem 'font-awesome-sass', '~> 5.0.9'
 gem 'simple_form'
 gem 'autoprefixer-rails'
